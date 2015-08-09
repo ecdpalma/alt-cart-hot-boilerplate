@@ -1,5 +1,6 @@
 import React from 'react';
 import AltCartActions from '../actions/AltCartActions';
+import AltProductActions from '../actions/AltProductActions';
 
 export default class AltProduct extends React.Component {
 
@@ -15,12 +16,12 @@ export default class AltProduct extends React.Component {
             type: this.props.selected.type,
             price: this.props.selected.price
         };
-        AltCartActions.addToCart(sku, update);
-        AltCartActions.updateCartVisible(true);
+        AltCartActions.addProduct(sku, update);
+        AltCartActions.updateVisibility(true);
     }
 
     selectVariant(event) {
-        AltCartActions.selectProduct(event.target.value);
+        AltProductActions.select(event.target.value);
     }
 
     render() {

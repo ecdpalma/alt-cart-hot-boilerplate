@@ -2,24 +2,16 @@ import alt from '../alt'
 
 class AltCartActions {
 
-    receiveProduct(data) {
-        this.dispatch(data);
-    }
-
-    selectProduct(index) {
-        this.dispatch(index);
-    }
-
-    addToCart(sku, update) {
+    addProduct(sku, update) {
         this.dispatch( { sku, update });
     }
 
-    removeFromCart(sku) {
+    removeProduct(sku) {
         this.dispatch(sku);
     }
 
-    updateCartVisible(cartVisible) {
-        this.dispatch(cartVisible);
+    updateVisibility(visible) {
+        this.dispatch(visible);
     }
 }
 

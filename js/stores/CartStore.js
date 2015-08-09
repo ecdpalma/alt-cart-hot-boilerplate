@@ -35,16 +35,16 @@ class CartStore {
         return this.getState().cartVisible;
     }
 
-    onAddToCart(data) {
+    onAddProduct(data) {
         this.add(data.sku, data.update);
     }
 
-    onRemoveFromCart(sku) {
+    onRemoveProduct(sku) {
         this.removeItem(sku)
     }
 
-    onUpdateCartVisible(cartVisible) {
-        this.setCartVisible(cartVisible);
+    onUpdateVisibility(visible) {
+        this.setCartVisible(visible);
     }
 
     add(sku, update) {

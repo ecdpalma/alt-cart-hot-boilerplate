@@ -1,5 +1,5 @@
 import alt from '../alt';
-import AltCartActions from '../actions/AltCartActions'
+import AltProductActions from '../actions/AltProductActions'
 
 class ProductStore {
 
@@ -7,7 +7,7 @@ class ProductStore {
         this.product = {};
         this.selected = {};
 
-        this.bindActions(AltCartActions);
+        this.bindActions(AltProductActions);
     }
 
     static getProduct() {
@@ -22,12 +22,12 @@ class ProductStore {
         this.selected = this.product.variants[index];
     }
 
-    onReceiveProduct(data) {
+    onReceive(data) {
         this.product = data[0];
         this.selected = data[0].variants[0];
     }
 
-    onSelectProduct(index) {
+    onSelect(index) {
         this.setSelected(index);
     }
 }

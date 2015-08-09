@@ -1,9 +1,9 @@
-import AltCartActions from '../actions/AltCartActions';
+import AltProductActions from '../actions/AltProductActions';
 
 export default {
 
     getProductData() {
         var data = JSON.parse(localStorage.getItem('product'));
-        AltCartActions.receiveProduct(data);
+        AltProductActions.receive(data);
     }
 }

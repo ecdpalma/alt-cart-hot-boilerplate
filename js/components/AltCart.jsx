@@ -4,15 +4,15 @@ import AltCartActions from '../actions/AltCartActions';
 export default class AltCart extends React.Component {
 
     closeCart() {
-        AltCartActions.updateCartVisible(false);
+        AltCartActions.updateVisibility(false);
     }
 
     openCart() {
-        AltCartActions.updateCartVisible(true);
+        AltCartActions.updateVisibility(true);
     }
 
     removeFromCart(sku) {
-        AltCartActions.removeFromCart(sku);
+        AltCartActions.removeProduct(sku);
     }
 
     render() {
